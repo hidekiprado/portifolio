@@ -21,8 +21,11 @@
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "^5.0.1",
+    "react-social": "^1.10.0",
+    "react-social-icons": "^5.15.0",
     "react-vertical-timeline-component": "^3.5.2",
     "styled-components": "^5.3.6",
+    "typewriter-effect": "^2.19.0",
     "vertical-timeline-component-for-react": "^1.0.7",
     "web-vitals": "^2.1.4"
   },
