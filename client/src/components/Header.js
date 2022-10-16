@@ -28,7 +28,7 @@ const Header = () => {
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/skills">Skills</Nav.Link>
             <Nav.Link href="/education">Education</Nav.Link>
-            <Nav.Link href="#experience">Experience</Nav.Link>
+            <Nav.Link href="/experience">Experience</Nav.Link>
             <Nav.Link href="/projects">Projects</Nav.Link>
             <NavDropdown title="Contact me" id="basic-nav-dropdown">
               <NavDropdown.Item href="#contact/resume">Resume</NavDropdown.Item>

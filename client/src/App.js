@@ -1,25 +1,12 @@
 import "./App.css";
 import Header from "./components/Header";
+import Home from "./components/Home";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Education from "./components/Education";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 import { Routes, Route } from "react-router-dom";
-
-function Home() {
-  return <div>Home sweet home</div>;
-}
-function About() {
-  return <div>About</div>;
-}
-function Skills() {
-  return <div>Skills</div>;
-}
-function Education() {
-  return <div>Education</div>;
-}
-function Experience() {
-  return <div>Experience</div>;
-}
-function Projects() {
-  return <div>Projects</div>;
-}
 
 function App() {
   return (
