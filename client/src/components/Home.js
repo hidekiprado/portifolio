@@ -41,6 +41,18 @@ function Home() {
                 }}
               />
             </div>
+            <div className="social">
+              <SocialIcon
+                url="https://github.com/hidekiprado"
+                target="_blank"
+                rel="SocialIcon"
+              />
+              <SocialIcon
+                url="https://www.linkedin.com/in/vinicius-prado-8911ab3a/"
+                target="_blank"
+                rel="SocialIcon"
+              />
+            </div>
           </div>
         </Fade>
       </Container>
