@@ -1,4 +1,4 @@
-import { Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Fade, Zoom } from "react-awesome-reveal";
 import endpoints from "../constants/endpoints";
 import React, { useEffect, useState } from "react";
@@ -54,18 +54,6 @@ const Skills = () => {
                     </div>
                   );
                 })}
-              {/* <h3>Languages & Database</h3>
-          <Container>
-            <p>images</p>
-          </Container>
-          <h3>Frameworks & Technologies</h3>
-          <Container>
-            <p>images</p>
-          </Container>
-          <h3>Tools & Platforms</h3>
-          <Container>
-            <p>images</p>
-          </Container> */}
             </Zoom>
           </Fade>
         </Container>

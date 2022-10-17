@@ -1,4 +1,4 @@
-import { Container, Col, Row, Button, Card, Badge } from "react-bootstrap";
+import { Container, Row, Button, Card, Badge } from "react-bootstrap";
 import { Fade, Zoom } from "react-awesome-reveal";
 
 const Projects = () => {
@@ -18,8 +18,8 @@ const Projects = () => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </Card.Text>
-                    <Button variant="primary">GitHub</Button>
-                    <Button variant="primary">Live</Button>
+                    <Button variant="dark">GitHub</Button>
+                    <Button variant="dark">Live</Button>
                   </Card.Body>
                   <Card.Footer>
                     <Badge text="testing">testing</Badge>
@@ -34,8 +34,8 @@ const Projects = () => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </Card.Text>
-                    <Button variant="primary">GitHub</Button>
-                    <Button variant="primary">Live</Button>
+                    <Button variant="dark">GitHub</Button>
+                    <Button variant="dark">Live</Button>
                   </Card.Body>
                   <Card.Footer>
                     <Badge text="testing">testing</Badge>
@@ -50,8 +50,8 @@ const Projects = () => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </Card.Text>
-                    <Button variant="primary">GitHub</Button>
-                    <Button variant="primary">Live</Button>
+                    <Button variant="dark">GitHub</Button>
+                    <Button variant="dark">Live</Button>
                   </Card.Body>
                   <Card.Footer>
                     <Badge text="testing">testing</Badge>

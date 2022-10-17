@@ -1,4 +1,3 @@
-import { Container, Col, Row } from "react-bootstrap";
 import { Fade } from "react-awesome-reveal";
 import Typewriter from "typewriter-effect";
 import { SocialIcon } from "react-social-icons";
