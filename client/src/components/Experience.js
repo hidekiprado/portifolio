@@ -8,7 +8,7 @@ const Experience = () => {
         <Container>
           <Fade duration="2000">
             <Zoom>
-              <h1>Experience</h1>
+              <h1 style={{ marginBottom: "0px" }}>Experience</h1>
               <Timeline lineColor={"#ddd"}>
                 <TimelineItem
                   dateText="11/2010 – Present"

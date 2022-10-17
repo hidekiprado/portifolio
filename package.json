@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install --legacy-peer-deps && npm run build"
   },
   "dependencies": {
     "bootstrap": "^5.2.2",

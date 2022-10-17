@@ -14,3 +14,7 @@ a:link {
   margin-top: 2vh;
   gap: 200vh;
 }
+
+.timeline {
+  margin: 0px !important;
+}
