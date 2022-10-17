@@ -1,7 +1,20 @@
 import { Container, Col, Row } from "react-bootstrap";
 import { Fade, Zoom } from "react-awesome-reveal";
+import React, { useEffect, useState } from "react";
+import endpoints from "../constants/endpoints";
 
 function About() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch(endpoints.about, {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((res) => setData(res))
+      .catch((err) => err);
+  }, []);
+
   return (
     <>
       <div className="main-container">
@@ -11,11 +24,11 @@ function About() {
               <h1>About</h1>
               <Row>
                 <Col>
-                  <h3>Profile Title</h3>
-                  <p>Profile Description</p>
-                  <h3>Interests Title</h3>
-                  <p>Interests Description</p>
-                  <h3>Recreation Title</h3>
+                  <h3>{data?.aboutTitle}</h3>
+                  <p>{data?.about}</p>
+                  <h3>{data?.interests}</h3>
+                  <p>{data?.interestsContent}</p>
+                  <h3>{data?.recreationTitle}</h3>
                   <p>Recreation Description</p>
                 </Col>
                 <Col>
