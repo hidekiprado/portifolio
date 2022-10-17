@@ -16,48 +16,39 @@ const styles = {
   inlineChild: {
     display: "inline-block",
   },
-  mainContainer: {
-    height: "100%",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  },
 };
-function Home() {
+const Home = () => {
   return (
     <>
-      <Container>
-        <Fade>
-          <div style={styles.mainContainer}>
-            <h1 style={styles.nameStyle}>Vinicius Prado</h1>
-            <div style={styles.typeWriterContainer}>
-              <h2 style={styles.inlineChild}>I&apos;m&nbsp;</h2>
-              <Typewriter
-                options={{
-                  loop: true,
-                  autoStart: true,
-                  strings: ["a Junior Software Engineer", "an Eager Learner"],
-                }}
-              />
-            </div>
-            <div className="social">
-              <SocialIcon
-                url="https://github.com/hidekiprado"
-                target="_blank"
-                rel="SocialIcon"
-              />
-              <SocialIcon
-                url="https://www.linkedin.com/in/vinicius-prado-8911ab3a/"
-                target="_blank"
-                rel="SocialIcon"
-              />
-            </div>
+      <Fade>
+        <div className="main-container">
+          <h1 style={styles.nameStyle}>Vinicius Prado</h1>
+          <div style={styles.typeWriterContainer}>
+            <h2 style={styles.inlineChild}>I'm&nbsp;</h2>
+            <Typewriter
+              options={{
+                loop: true,
+                autoStart: true,
+                strings: ["a Junior Software Engineer", "an Eager Learner"],
+              }}
+            />
           </div>
-        </Fade>
-      </Container>
+          <div className="social">
+            <SocialIcon
+              url="https://github.com/hidekiprado"
+              target="_blank"
+              rel="SocialIcon"
+            />
+            <SocialIcon
+              url="https://www.linkedin.com/in/vinicius-prado-8911ab3a/"
+              target="_blank"
+              rel="SocialIcon"
+            />
+          </div>
+        </div>
+      </Fade>
     </>
   );
-}
+};
 
 export default Home;

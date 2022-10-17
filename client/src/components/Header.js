@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import endpoints from "../constants/endpoints";
 import React, { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const styles = {
   logo: {
@@ -12,6 +13,7 @@ const styles = {
 
 const Header = () => {
   const [data, setData] = useState(null);
+
   useEffect(() => {
     fetch(endpoints.header, {
       method: "GET",
@@ -20,6 +22,15 @@ const Header = () => {
       .then((res) => setData(res))
       .catch((err) => err);
   }, []);
+
+  let activeStyle = {
+    color: "#3dacad",
+    padding: "8px",
+  };
+  let desactiveStyle = {
+    color: "#dedede",
+    padding: "8px",
+  };
   return (
     <Navbar sticky="top" variant="dark" bg="dark" expand="lg">
       <Container>
@@ -32,21 +43,25 @@ const Header = () => {
             alt="main logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse
+          className="justify-content-center"
+          id="responsive-navbar-nav"
+        >
+          <Nav>
             {data &&
               data.sections?.map((section, index) => (
-                <Nav.Link key={index} href={section.href}>
-                  {section.title}
-                </Nav.Link>
+                <Nav.Item style={{ alignSelf: "center" }} key={index}>
+                  <NavLink
+                    style={({ isActive }) =>
+                      isActive ? activeStyle : desactiveStyle
+                    }
+                    to={section.href}
+                  >
+                    {section.title}
+                  </NavLink>
+                </Nav.Item>
               ))}
-            {/* <Nav.Link href={data?.sections[0].href}>Home</Nav.Link>
-            <Nav.Link href={data?.sections[1].href}>About</Nav.Link>
-            <Nav.Link href={data?.sections[2].href}>Skills</Nav.Link>
-            <Nav.Link href={data?.sections[3].href}>Education</Nav.Link>
-            <Nav.Link href={data?.sections[4].href}>Experience</Nav.Link>
-            <Nav.Link href={data?.sections[5].href}>Projects</Nav.Link> */}
             <NavDropdown title="Contact me" id="basic-nav-dropdown">
               <NavDropdown.Item href="#contact/resume">Resume</NavDropdown.Item>
               <NavDropdown.Divider />

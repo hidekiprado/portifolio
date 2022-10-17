@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 import { Chrono } from "react-chrono";
 
 const data = [
@@ -21,23 +21,27 @@ const data = [
   },
 ];
 
-function Education() {
+const Education = () => {
   return (
     <>
-      <Container>
-        <h1>Education</h1>
-        <Fade>
-          <Container>
-            <Chrono
-              items={data}
-              mode="VERTICAL_ALTERNATING"
-              twoColumns
-            ></Chrono>
-          </Container>
-        </Fade>
-      </Container>
+      <div className="main-container">
+        <Container>
+          <Fade duration="2000">
+            <Zoom>
+              <h1>Education</h1>
+              <Container>
+                <Chrono
+                  items={data}
+                  mode="VERTICAL_ALTERNATING"
+                  twoColumns
+                ></Chrono>
+              </Container>
+            </Zoom>
+          </Fade>
+        </Container>
+      </div>
     </>
   );
-}
+};
 
 export default Education;

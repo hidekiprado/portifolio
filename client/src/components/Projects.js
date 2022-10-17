@@ -1,69 +1,69 @@
 import { Container, Col, Row, Button, Card, Badge } from "react-bootstrap";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 
-function Projects() {
+const Projects = () => {
   return (
     <>
-      <Container>
-        <Fade>
-          <h1>Projects</h1>
-          <Row>
-            <Col>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="../images/projects/wordle.png" />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">GitHub</Button>
-                  <Button variant="primary">Live</Button>
-                </Card.Body>
-                <Card.Footer>
-                  <Badge text="testing">testing</Badge>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="../images/projects/wordle.png" />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">GitHub</Button>
-                  <Button variant="primary">Live</Button>
-                </Card.Body>
-                <Card.Footer>
-                  <Badge text="testing">testing</Badge>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="../images/projects/wordle.png" />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">GitHub</Button>
-                  <Button variant="primary">Live</Button>
-                </Card.Body>
-                <Card.Footer>
-                  <Badge text="testing">testing</Badge>
-                </Card.Footer>
-              </Card>
-            </Col>
-          </Row>
-        </Fade>
-      </Container>
+      <div className="main-container">
+        <Container>
+          <Fade duration="2000">
+            <Zoom>
+              <h1>Projects</h1>
+              <Row style={{ display: "flex", justifyContent: "space-around" }}>
+                <Card style={{ width: "20rem" }}>
+                  <Card.Img variant="top" src="../images/projects/wordle.png" />
+                  <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </Card.Text>
+                    <Button variant="primary">GitHub</Button>
+                    <Button variant="primary">Live</Button>
+                  </Card.Body>
+                  <Card.Footer>
+                    <Badge text="testing">testing</Badge>
+                  </Card.Footer>
+                </Card>
+
+                <Card style={{ width: "20rem" }}>
+                  <Card.Img variant="top" src="../images/projects/wordle.png" />
+                  <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </Card.Text>
+                    <Button variant="primary">GitHub</Button>
+                    <Button variant="primary">Live</Button>
+                  </Card.Body>
+                  <Card.Footer>
+                    <Badge text="testing">testing</Badge>
+                  </Card.Footer>
+                </Card>
+
+                <Card style={{ width: "20rem" }}>
+                  <Card.Img variant="top" src="../images/projects/wordle.png" />
+                  <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </Card.Text>
+                    <Button variant="primary">GitHub</Button>
+                    <Button variant="primary">Live</Button>
+                  </Card.Body>
+                  <Card.Footer>
+                    <Badge text="testing">testing</Badge>
+                  </Card.Footer>
+                </Card>
+              </Row>
+            </Zoom>
+          </Fade>
+        </Container>
+      </div>
     </>
   );
-}
+};
 
 export default Projects;
