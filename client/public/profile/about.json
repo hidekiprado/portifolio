@@ -4,26 +4,22 @@
   "interests": "Interests and activities",
   "interestsContent": "I enjoy sports and being outdoors. I love spending time at Australian beaches and I’m a passionate Slackliner. \n I try to look at every step-in life as a project and apply my knowledge and experience to resolve anything that comes along as well as effectively manage and lead groups of people to achieve collective goals.",
   "recreationTitle": "  Sports and Recreation",
-  "recreation": [
+  "recreations": [
     {
-      "items": [
-        {
-          "icon": "images/about/slackline.png",
-          "title": "Slackline"
-        },
-        {
-          "icon": "images/about/juggling.png",
-          "title": "Juggling"
-        },
-        {
-          "icon": "images/about/rock-climbing.png",
-          "title": "Rock Climbing"
-        },
-        {
-          "icon": "images/about/rubiks-cube.png",
-          "title": "Speed Cubing"
-        }
-      ]
+      "icon": "images/about/slackline.png",
+      "title": "Slackline"
+    },
+    {
+      "icon": "images/about/juggling.png",
+      "title": "Juggling"
+    },
+    {
+      "icon": "images/about/rock-climbing.png",
+      "title": "Rock Climbing"
+    },
+    {
+      "icon": "images/about/rubiks-cube.png",
+      "title": "Speed Cubing"
     }
   ],
   "image": "images/about/profile.png"
