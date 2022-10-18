@@ -1,4 +1,4 @@
-import { Container, Col, Row, Image } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import { Fade, Zoom } from "react-awesome-reveal";
 import React, { useEffect, useState } from "react";
 import endpoints from "../constants/endpoints";
@@ -70,7 +70,7 @@ function About() {
                     <img
                       style={{ maxWidth: "80vw", margin: "10px" }}
                       src={data?.image}
-                      alt="face-image"
+                      alt="self"
                     />
                   </Container>
                 </Col>

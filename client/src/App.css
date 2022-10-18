@@ -17,3 +17,6 @@ a:link {
 .timeline {
   margin: 0px !important;
 }
+.nav-link:hover {
+  color: black;
+}

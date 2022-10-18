@@ -1,0 +1,30 @@
+{
+  "experiences": [
+    {
+      "title": "Rope Access Technician",
+      "company": "All Trades Abseiling",
+      "workType": "Sole-Trader",
+      "technologiesTitle": "",
+      "technologies": "",
+      "descriptionTitle": "Responsibilties",
+      "description": ["- Remedial repairs"],
+      "dateText": "11/2017 – Present"
+    },
+    {
+      "title": "Systems integration Engineer",
+      "company": "Syngenta, Brazil",
+      "workType": "Full-time",
+      "technologiesTitle": "Technologies used",
+      "technologies": "Scrum, Business Analysis, SQL, Microsoft 365 products",
+      "descriptionTitle": "Responsibilties",
+      "description": [
+        "- System design and planning activities with vendor including business requirement mapping",
+        "- Data format and application integration interface specifications",
+        "- Agile project management with daily reporting on progress and risk identification",
+        "- Design and implementation of Data pipeline and supervision of data loads",
+        "- Consulting, training and change management of team members"
+      ],
+      "dateText": "09/2011 – 05/2016"
+    }
+  ]
+}

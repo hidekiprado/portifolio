@@ -10,10 +10,9 @@ const styles = {
     height: 40,
   },
 };
-//testing
+
 const Header = () => {
   const [data, setData] = useState(null);
-
   useEffect(() => {
     fetch(endpoints.header, {
       method: "GET",
@@ -24,12 +23,13 @@ const Header = () => {
   }, []);
 
   let activeStyle = {
-    color: "#3dacad",
+    color: "#02A3BC",
     padding: "8px",
   };
   let desactiveStyle = {
     color: "#dedede",
     padding: "8px",
+    ":hover": { color: "green" }, // working on it --------------------------LOADING-------------
   };
   return (
     <Navbar sticky="top" variant="dark" bg="dark" expand="lg">
@@ -53,6 +53,7 @@ const Header = () => {
               data.sections?.map((section, index) => (
                 <Nav.Item style={{ alignSelf: "center" }} key={index}>
                   <NavLink
+                    className="nav-link"
                     style={({ isActive }) =>
                       isActive ? activeStyle : desactiveStyle
                     }
