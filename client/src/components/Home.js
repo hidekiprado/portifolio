@@ -54,17 +54,16 @@ const Home = () => {
                   }}
                 />
               </div>
-              <div className="social">
+              <div style={{ display: "flex", gap: ".5rem" }}>
                 {data?.social.map((icon) => {
                   return (
-                    <>
+                    <div key={icon.network}>
                       <SocialIcon
-                        key={icon.network}
                         url={icon.href}
                         target="_blank"
                         rel="SocialIcon"
-                      />{" "}
-                    </>
+                      />
+                    </div>
                   );
                 })}
               </div>

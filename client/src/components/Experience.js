@@ -53,8 +53,8 @@ const Experience = () => {
                         <h5>{item.technologiesTitle}</h5>
                         <p>{item.technologies}</p>
                         <h5>{item.descriptionTitle}</h5>
-                        {item.description.map((row, indexDesc) => {
-                          return <p>{row}</p>;
+                        {item.description.map((row) => {
+                          return <p key={row}>{row}</p>;
                         })}
                       </TimelineItem>
                     </div>
