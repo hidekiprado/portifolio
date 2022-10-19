@@ -1,7 +1,8 @@
 import { Container, Col, Row } from "react-bootstrap";
-import { Fade, Zoom } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import React, { useEffect, useState } from "react";
-import endpoints from "../constants/endpoints";
+import endPoints from "../constants/endPoints";
+import MainSpinner from "./MainSpinner";
 
 const styles = {
   iconStyle: {
@@ -28,7 +29,7 @@ function About() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch(endpoints.about, {
+    fetch(endPoints.about, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -40,11 +41,14 @@ function About() {
     <>
       <div className="main-container">
         <Container>
-          <Fade duration="2000">
-            <Zoom>
-              <h1>About</h1>
-              <Row style={{ whiteSpace: "pre-wrap" }}>
-                <Col style={styles.infoContainer}>
+          <Fade>
+            <h1>About</h1>
+          </Fade>
+          <br />
+          {data ? (
+            <Fade>
+              <Row>
+                <Col lg={true} style={styles.infoContainer}>
                   <h3>{data?.aboutTitle}</h3>
                   <p>{data?.about}</p>
                   <h3>{data?.interests}</h3>
@@ -66,17 +70,17 @@ function About() {
                   </div>
                 </Col>
                 <Col>
-                  <Container>
-                    <img
-                      style={{ maxWidth: "80vw", margin: "10px" }}
-                      src={data?.image}
-                      alt="self"
-                    />
-                  </Container>
+                  <img
+                    style={{ maxWidth: "400px", margin: "10px" }}
+                    src={data?.image}
+                    alt="self"
+                  />
                 </Col>
               </Row>
-            </Zoom>
-          </Fade>
+            </Fade>
+          ) : (
+            <MainSpinner />
+          )}
         </Container>
       </div>
     </>

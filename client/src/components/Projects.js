@@ -1,65 +1,87 @@
-import { Container, Row, Button, Card, Badge } from "react-bootstrap";
-import { Fade, Zoom } from "react-awesome-reveal";
+import { Container, Row, Col, Button, Card, Badge } from "react-bootstrap";
+import { Fade } from "react-awesome-reveal";
+import React, { useEffect, useState } from "react";
+import endPoints from "../constants/endPoints";
+import MainSpinner from "./MainSpinner";
 
 const Projects = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch(endPoints.projects, {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((res) => setData(res))
+      .catch((err) => err);
+  }, []);
   return (
     <>
       <div className="main-container">
         <Container>
-          <Fade duration="2000">
-            <Zoom>
-              <h1>Projects</h1>
-              <Row style={{ display: "flex", justifyContent: "space-around" }}>
-                <Card style={{ width: "20rem" }}>
-                  <Card.Img variant="top" src="../images/projects/wordle.png" />
-                  <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="dark">GitHub</Button>
-                    <Button variant="dark">Live</Button>
-                  </Card.Body>
-                  <Card.Footer>
-                    <Badge text="testing">testing</Badge>
-                  </Card.Footer>
-                </Card>
-
-                <Card style={{ width: "20rem" }}>
-                  <Card.Img variant="top" src="../images/projects/wordle.png" />
-                  <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="dark">GitHub</Button>
-                    <Button variant="dark">Live</Button>
-                  </Card.Body>
-                  <Card.Footer>
-                    <Badge text="testing">testing</Badge>
-                  </Card.Footer>
-                </Card>
-
-                <Card style={{ width: "20rem" }}>
-                  <Card.Img variant="top" src="../images/projects/wordle.png" />
-                  <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="dark">GitHub</Button>
-                    <Button variant="dark">Live</Button>
-                  </Card.Body>
-                  <Card.Footer>
-                    <Badge text="testing">testing</Badge>
-                  </Card.Footer>
-                </Card>
-              </Row>
-            </Zoom>
+          <Fade>
+            <h1>Projects</h1>
           </Fade>
+          <br />
+          {data ? (
+            <Fade>
+              <Row
+                style={{
+                  rowGap: "2em",
+                }}
+              >
+                {data.projects.map((item, index) => {
+                  return (
+                    <Col style={{ display: "flex", justifyContent: "center" }}>
+                      <Card
+                        key={index}
+                        style={{
+                          width: "20rem",
+                          padding: "0px",
+                        }}
+                      >
+                        <Card.Img variant="top" src={item.image} />
+                        <Card.Body>
+                          <Card.Title>{item.title}</Card.Title>
+                          <Card.Text>{item.bodyText}</Card.Text>
+                          {item.links.map((link) => {
+                            return (
+                              <>
+                                <Button
+                                  target="_blank"
+                                  href={link.href}
+                                  key={link.text}
+                                  variant="outline-dark"
+                                >
+                                  {link.text}
+                                </Button>{" "}
+                              </>
+                            );
+                          })}
+                        </Card.Body>
+                        <Card.Footer>
+                          {item.tags.map((tag) => {
+                            return (
+                              <>
+                                <Badge key={tag} bg="dark">
+                                  {tag}
+                                </Badge>{" "}
+                              </>
+                            );
+                          })}
+                          <Badge bg="dark" text="testing">
+                            testing
+                          </Badge>
+                        </Card.Footer>
+                      </Card>
+                    </Col>
+                  );
+                })}
+              </Row>
+            </Fade>
+          ) : (
+            <MainSpinner />
+          )}
         </Container>
       </div>
     </>

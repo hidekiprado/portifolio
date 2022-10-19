@@ -1,0 +1,67 @@
+{
+  "projects": [
+    {
+      "image": "images/projects/wordle.png",
+      "title": "Wordle",
+      "bodyText": "- My first project using skills acquired at General Assembly (Software Engineering )",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/hidekiprado/wordle"
+        },
+        {
+          "text": "Live",
+          "href": "https://hidekiprado.github.io/wordle/"
+        }
+      ],
+      "tags": ["HTML", "JavaScript", "CSS"]
+    },
+    {
+      "image": "images/projects/my-recipes.png",
+      "title": "My Recipes",
+      "bodyText": "- My second project using skills acquired at General Assembly (Software Engineering )",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/hidekiprado/My-Recipes"
+        },
+        {
+          "text": "Live",
+          "href": "https://my-recipes-vinicius.herokuapp.com/"
+        }
+      ],
+      "tags": [
+        "Python",
+        "Django",
+        "JavaScript",
+        "Flask",
+        "Heroku",
+        "PostgreSQL",
+        "Bcrypt"
+      ]
+    },
+    {
+      "image": "images/projects/cocktail-cabinet.png",
+      "title": "Cocktail Cabinet",
+      "bodyText": "- My third project using skills acquired at General Assembly (Software Engineering )",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/elevin-bot/cocktailCabinet"
+        },
+        {
+          "text": "Live",
+          "href": "https://hidden-inlet-61020.herokuapp.com/"
+        }
+      ],
+      "tags": [
+        "NodeJS",
+        "JavaScript",
+        "AXIOS",
+        "PostgreSQL",
+        "Heroku",
+        "Bcrypt"
+      ]
+    }
+  ]
+}

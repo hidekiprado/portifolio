@@ -1,6 +1,8 @@
 import { Fade } from "react-awesome-reveal";
 import Typewriter from "typewriter-effect";
 import { SocialIcon } from "react-social-icons";
+import React, { useEffect, useState } from "react";
+import endPoints from "../constants/endPoints";
 
 const styles = {
   nameStyle: {
@@ -15,34 +17,55 @@ const styles = {
   inlineChild: {
     display: "inline-block",
   },
+  homeMainContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "60vh",
+  },
 };
 const Home = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch(endPoints.home, {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((res) => setData(res))
+      .catch((err) => err);
+  }, []);
   return (
     <>
       <Fade>
         <div className="main-container">
-          <h1 style={styles.nameStyle}>Vinicius Prado</h1>
-          <div style={styles.typeWriterContainer}>
-            <h2 style={styles.inlineChild}>I'm&nbsp;</h2>
-            <Typewriter
-              options={{
-                loop: true,
-                autoStart: true,
-                strings: ["a Junior Software Engineer", "an Eager Learner"],
-              }}
-            />
-          </div>
-          <div className="social">
-            <SocialIcon
-              url="https://github.com/hidekiprado"
-              target="_blank"
-              rel="SocialIcon"
-            />
-            <SocialIcon
-              url="https://www.linkedin.com/in/vinicius-prado-8911ab3a/"
-              target="_blank"
-              rel="SocialIcon"
-            />
+          <div style={styles.homeMainContainer}>
+            <h1 style={styles.nameStyle}>{data?.name}</h1>
+            <div style={styles.typeWriterContainer}>
+              <h2 style={styles.inlineChild}>I'm&nbsp;</h2>
+              <Typewriter
+                options={{
+                  loop: true,
+                  autoStart: true,
+                  strings: data?.roles,
+                }}
+              />
+            </div>
+            <div className="social">
+              {data?.social.map((icon) => {
+                return (
+                  <>
+                    <SocialIcon
+                      key={icon.network}
+                      url={icon.href}
+                      target="_blank"
+                      rel="SocialIcon"
+                    />{" "}
+                  </>
+                );
+              })}
+            </div>
           </div>
         </div>
       </Fade>

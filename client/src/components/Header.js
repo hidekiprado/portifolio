@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
-import endpoints from "../constants/endpoints";
+import endPoints from "../constants/endPoints";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const styles = {
 const Header = () => {
   const [data, setData] = useState(null);
   useEffect(() => {
-    fetch(endpoints.header, {
+    fetch(endPoints.header, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -26,11 +26,7 @@ const Header = () => {
     color: "#02A3BC",
     padding: "8px",
   };
-  let desactiveStyle = {
-    color: "#dedede",
-    padding: "8px",
-    ":hover": { color: "green" }, // working on it --------------------------LOADING-------------
-  };
+
   return (
     <Navbar sticky="top" variant="dark" bg="dark" expand="lg">
       <Container>
@@ -54,9 +50,7 @@ const Header = () => {
                 <Nav.Item style={{ alignSelf: "center" }} key={index}>
                   <NavLink
                     className="nav-link"
-                    style={({ isActive }) =>
-                      isActive ? activeStyle : desactiveStyle
-                    }
+                    style={({ isActive }) => (isActive ? activeStyle : null)}
                     to={section.href}
                   >
                     {section.title}

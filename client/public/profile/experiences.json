@@ -8,7 +8,7 @@
       "technologies": "",
       "descriptionTitle": "Responsibilties",
       "description": ["- Remedial repairs"],
-      "dateText": "11/2017 – Present"
+      "date": "11/2017 – Present"
     },
     {
       "title": "Systems integration Engineer",
@@ -24,7 +24,7 @@
         "- Design and implementation of Data pipeline and supervision of data loads",
         "- Consulting, training and change management of team members"
       ],
-      "dateText": "09/2011 – 05/2016"
+      "date": "09/2011 – 05/2016"
     }
   ]
 }

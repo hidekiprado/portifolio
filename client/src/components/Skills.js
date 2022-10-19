@@ -1,7 +1,8 @@
 import { Container } from "react-bootstrap";
 import { Fade, Zoom } from "react-awesome-reveal";
-import endpoints from "../constants/endpoints";
+import endPoints from "../constants/endPoints";
 import React, { useEffect, useState } from "react";
+import MainSpinner from "./MainSpinner";
 
 const styles = {
   iconStyle: {
@@ -15,7 +16,7 @@ const styles = {
 const Skills = () => {
   const [data, setData] = useState(null);
   useEffect(() => {
-    fetch(endpoints.skills, {
+    fetch(endPoints.skills, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -26,36 +27,42 @@ const Skills = () => {
     <>
       <div className="main-container">
         <Container>
-          <Fade duration="2000">
-            <Zoom>
-              <h1>Skills</h1>
-              <p>{data?.intro}</p>
-
-              {data &&
-                data.skills?.map((skill, index) => {
-                  return (
-                    <div key={index}>
-                      <h2>{skill.title}</h2>
-                      {skill.items.map((item) => {
-                        return (
-                          <div
-                            style={{ display: "inline-block" }}
-                            key={item.title}
-                          >
-                            <img
-                              style={styles.iconStyle}
-                              src={item.icon}
-                              alt={item.title}
-                            />
-                            <p>{item.title}</p>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  );
-                })}
-            </Zoom>
+          <Fade>
+            <h1>Skills</h1>
           </Fade>
+          {data ? (
+            <Fade duration="2000">
+              <Zoom>
+                <br />
+                <p>{data.intro}</p>
+                {data &&
+                  data.skills?.map((skill, index) => {
+                    return (
+                      <div key={index}>
+                        <h2>{skill.title}</h2>
+                        {skill.items.map((item) => {
+                          return (
+                            <div
+                              style={{ display: "inline-block" }}
+                              key={item.title}
+                            >
+                              <img
+                                style={styles.iconStyle}
+                                src={item.icon}
+                                alt={item.title}
+                              />
+                              <p>{item.title}</p>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    );
+                  })}
+              </Zoom>
+            </Fade>
+          ) : (
+            <MainSpinner />
+          )}
         </Container>
       </div>
     </>

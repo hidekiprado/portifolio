@@ -1,0 +1,14 @@
+{
+  "name": "Vinicius Prado",
+  "roles": ["a Junior Software Engineer", "an eager learner"],
+  "social": [
+    {
+      "network": "linkedin",
+      "href": "https://www.linkedin.com/in/vinicius-prado-8911ab3a/"
+    },
+    {
+      "network": "github",
+      "href": "https://github.com/hidekiprado"
+    }
+  ]
+}
