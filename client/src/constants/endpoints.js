@@ -1,4 +1,4 @@
-const endpoints = {
+const endPoints = {
   header: "profile/header.json",
   skills: "profile/skills.json",
   about: "profile/about.json",
@@ -8,4 +8,4 @@ const endpoints = {
   home: "profile/home.json",
 };
 
-export default endpoints;
+export default endPoints;

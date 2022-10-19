@@ -57,13 +57,6 @@ const Header = () => {
                   </NavLink>
                 </Nav.Item>
               ))}
-            <NavDropdown title="Contact me" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#contact/resume">Resume</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#contact/email">
-                E-mail Vinnie
-              </NavDropdown.Item>
-            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
