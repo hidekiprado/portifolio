@@ -18,7 +18,8 @@ const Experience = () => {
   }, []);
   return (
     <>
-      <div className="main-container">
+      <h1>Experience</h1>
+      {/* <div className="main-container">
         <Container>
           <Fade>
             <h1>Experience</h1>
@@ -66,7 +67,7 @@ const Experience = () => {
             <MainSpinner />
           )}
         </Container>
-      </div>
+      </div> */}
     </>
   );
 };

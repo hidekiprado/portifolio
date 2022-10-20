@@ -27,6 +27,7 @@ const ContactMe = () => {
 
   return (
     <>
+      {/* <h1>Contact</h1> */}
       <div className="main-container">
         <Container>
           <Fade>

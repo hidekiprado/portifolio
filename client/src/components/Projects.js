@@ -21,6 +21,7 @@ const Projects = () => {
   }, []);
   return (
     <>
+      {/* <h1>Projects</h1> */}
       <div className="main-container">
         <Container>
           <Fade>

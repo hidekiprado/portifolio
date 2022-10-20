@@ -5,14 +5,23 @@ import React, { useEffect, useState, useContext } from "react";
 import endPoints from "../constants/endPoints";
 import MainSpinner from "./MainSpinner";
 import AppContext from "../AppContext";
+import { lightTheme, darkTheme } from "../theme/themes";
 
 const Education = () => {
+  // Component ThemeToggler is the context consumer with the button DarkModeToggle
+  // the Provider is on the App.js
+
+  const isDarkMode = useContext(AppContext).darkMode.value;
+
   const [data, setData] = useState(null);
   const [mode, setMode] = useState("VERTICAL_ALTERNATING");
-  const theme = useContext(AppContext).darkMode.value;
+  const [theme, setTheme] = useState(isDarkMode);
 
   useEffect(() => {
-    console.log("from education", theme);
+    return isDarkMode ? setTheme(darkTheme) : setTheme(lightTheme);
+  }, [isDarkMode]);
+
+  useEffect(() => {
     fetch(endPoints.education, {
       method: "GET",
     })
@@ -23,16 +32,17 @@ const Education = () => {
     if (window?.innerWidth < 576) {
       setMode("VERTICAL");
     }
-  }, [theme]);
+  }, []);
   return (
     <>
+      {/* <h1>Education</h1> */}
       <div className="main-container">
         <Container>
           <Fade>
             <h1>Education</h1>
           </Fade>
           <br />
-          {data ? (
+          {data && theme ? (
             <Fade>
               <Chrono
                 allowDynamicUpdate
@@ -47,7 +57,7 @@ const Education = () => {
                   cardBgColor: "#dedede",
                   cardForeColor: "#2b2b2b",
                   titleColor: "#2b2b2b",
-                  titleColorActive: "#2b2b2b", //special black
+                  titleColorActive: theme.fontColor, //special black
                 }}
               >
                 <div className="chrono-icons">

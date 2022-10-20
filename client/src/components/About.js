@@ -39,6 +39,7 @@ function About() {
 
   return (
     <>
+      {/* <h1>About</h1> */}
       <div className="main-container">
         <Container>
           <Fade>
