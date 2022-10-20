@@ -3,16 +3,22 @@ import { Nav, Navbar, Container } from "react-bootstrap";
 import endPoints from "../constants/endPoints";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import ThemeToggler from "./ThemeToggler";
 
 const styles = {
   logo: {
     width: 50,
     height: 40,
   },
+  activeStyle: {
+    color: "#02A3BC",
+    padding: "8px",
+  },
 };
 
 const Header = () => {
   const [data, setData] = useState(null);
+
   useEffect(() => {
     fetch(endPoints.header, {
       method: "GET",
@@ -21,11 +27,6 @@ const Header = () => {
       .then((res) => setData(res))
       .catch((err) => err);
   }, []);
-
-  let activeStyle = {
-    color: "#02A3BC",
-    padding: "8px",
-  };
 
   return (
     <Navbar sticky="top" variant="dark" bg="dark" expand="lg">
@@ -50,14 +51,19 @@ const Header = () => {
                 <Nav.Item style={{ alignSelf: "center" }} key={index}>
                   <NavLink
                     className="nav-link"
-                    style={({ isActive }) => (isActive ? activeStyle : null)}
+                    style={({ isActive }) =>
+                      isActive ? styles.activeStyle : null
+                    }
                     to={section.href}
                   >
                     {section.title}
                   </NavLink>
                 </Nav.Item>
               ))}
-          </Nav>
+          </Nav>{" "}
+          <div style={{ margin: "0em 3em" }}>
+            <ThemeToggler />
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

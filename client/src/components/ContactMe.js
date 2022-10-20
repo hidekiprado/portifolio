@@ -1,7 +1,7 @@
 import { Form, Button } from "react-bootstrap";
 import { Container, Row, Col } from "react-bootstrap";
 import { Fade } from "react-awesome-reveal";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const ContactMe = () => {
   const [response, setResponse] = useState(null);

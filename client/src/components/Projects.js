@@ -4,6 +4,10 @@ import React, { useEffect, useState } from "react";
 import endPoints from "../constants/endPoints";
 import MainSpinner from "./MainSpinner";
 
+const styles = {
+  buttonsSpace: { margin: "0px 4px" },
+};
+
 const Projects = () => {
   const [data, setData] = useState(null);
 
@@ -30,11 +34,13 @@ const Projects = () => {
                   rowGap: "2em",
                 }}
               >
-                {data.projects.map((item, index) => {
+                {data.projects.map((item) => {
                   return (
-                    <Col style={{ display: "flex", justifyContent: "center" }}>
+                    <Col
+                      key={item.title}
+                      style={{ display: "flex", justifyContent: "center" }}
+                    >
                       <Card
-                        key={index}
                         style={{
                           width: "20rem",
                           padding: "0px",
@@ -46,27 +52,28 @@ const Projects = () => {
                           <Card.Text>{item.bodyText}</Card.Text>
                           {item.links.map((link) => {
                             return (
-                              <>
-                                <Button
-                                  target="_blank"
-                                  href={link.href}
-                                  key={link.text}
-                                  variant="outline-dark"
-                                >
-                                  {link.text}
-                                </Button>{" "}
-                              </>
+                              <Button
+                                style={styles.buttonsSpace}
+                                target="_blank"
+                                href={link.href}
+                                key={link.href}
+                                variant="outline-dark"
+                              >
+                                {link.text}
+                              </Button>
                             );
                           })}
                         </Card.Body>
                         <Card.Footer>
                           {item.tags.map((tag) => {
                             return (
-                              <>
-                                <Badge key={tag} bg="dark">
-                                  {tag}
-                                </Badge>{" "}
-                              </>
+                              <Badge
+                                style={styles.buttonsSpace}
+                                key={tag}
+                                bg="dark"
+                              >
+                                {tag}
+                              </Badge>
                             );
                           })}
                           <Badge bg="dark" text="testing">

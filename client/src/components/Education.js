@@ -1,15 +1,18 @@
 import { Container } from "react-bootstrap";
 import { Fade } from "react-awesome-reveal";
 import { Chrono } from "react-chrono";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import endPoints from "../constants/endPoints";
 import MainSpinner from "./MainSpinner";
+import AppContext from "../AppContext";
 
 const Education = () => {
   const [data, setData] = useState(null);
   const [mode, setMode] = useState("VERTICAL_ALTERNATING");
+  const theme = useContext(AppContext).darkMode.value;
 
   useEffect(() => {
+    console.log("from education", theme);
     fetch(endPoints.education, {
       method: "GET",
     })
@@ -20,7 +23,7 @@ const Education = () => {
     if (window?.innerWidth < 576) {
       setMode("VERTICAL");
     }
-  }, []);
+  }, [theme]);
   return (
     <>
       <div className="main-container">

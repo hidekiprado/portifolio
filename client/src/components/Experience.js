@@ -33,7 +33,7 @@ const Experience = () => {
                         dateText="04/2009 – 11/2010"
                         dateInnerStyle={{
                           background: "#02A3BC",
-                          color: "#484848",
+                          color: "#2b2b2b",
                         }}
                         bodyContainerStyle={{
                           background: "#ddd",
@@ -45,7 +45,7 @@ const Experience = () => {
                         <br />
                         <h4 style={{ color: "#02A3BC" }}>
                           {item.company}-{" "}
-                          <span style={{ color: "#484848" }}>
+                          <span style={{ color: "#2b2b2b" }}>
                             {item.workType}
                           </span>
                         </h4>
