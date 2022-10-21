@@ -5,6 +5,12 @@ import endPoints from "../constants/endPoints";
 import MainSpinner from "./MainSpinner";
 
 const styles = {
+  infoContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-around",
+    gap: "0.9vh",
+  },
   iconStyle: {
     height: 75,
     width: 75,
@@ -17,12 +23,7 @@ const styles = {
     textAlign: "center",
     margin: "0 0.2em",
   },
-  infoContainer: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-around",
-    gap: "0.9vh",
-  },
+  faceImageStyle: { maxWidth: "90%", margin: "10px", borderRadius: "1em" },
 };
 
 function About() {
@@ -72,7 +73,7 @@ function About() {
                 </Col>
                 <Col>
                   <img
-                    style={{ maxWidth: "400px", margin: "10px" }}
+                    style={styles.faceImageStyle}
                     src={data?.image}
                     alt="self"
                   />

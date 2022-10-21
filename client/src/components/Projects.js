@@ -32,57 +32,55 @@ const Projects = () => {
             <Fade>
               <Row
                 style={{
-                  rowGap: "2em",
+                  gap: "2em",
+                  whiteSpace: "pre-wrap",
+                  justifyContent: "center",
                 }}
               >
                 {data.projects.map((item) => {
                   return (
-                    <Col
+                    <Card
                       key={item.title}
-                      style={{ display: "flex", justifyContent: "center" }}
+                      style={{
+                        width: "20rem",
+                        padding: "0px",
+                      }}
                     >
-                      <Card
-                        style={{
-                          width: "20rem",
-                          padding: "0px",
-                        }}
-                      >
-                        <Card.Img variant="top" src={item.image} />
-                        <Card.Body>
-                          <Card.Title>{item.title}</Card.Title>
-                          <Card.Text>{item.bodyText}</Card.Text>
-                          {item.links.map((link) => {
-                            return (
-                              <Button
-                                style={styles.buttonsSpace}
-                                target="_blank"
-                                href={link.href}
-                                key={link.href}
-                                variant="outline-dark"
-                              >
-                                {link.text}
-                              </Button>
-                            );
-                          })}
-                        </Card.Body>
-                        <Card.Footer>
-                          {item.tags.map((tag) => {
-                            return (
-                              <Badge
-                                style={styles.buttonsSpace}
-                                key={tag}
-                                bg="dark"
-                              >
-                                {tag}
-                              </Badge>
-                            );
-                          })}
-                          <Badge bg="dark" text="testing">
-                            testing
-                          </Badge>
-                        </Card.Footer>
-                      </Card>
-                    </Col>
+                      <Card.Img variant="top" src={item.image} />
+                      <Card.Body>
+                        <Card.Title>{item.title}</Card.Title>
+                        <Card.Text>{item.bodyText}</Card.Text>
+                        {item.links.map((link) => {
+                          return (
+                            <Button
+                              style={styles.buttonsSpace}
+                              target="_blank"
+                              href={link.href}
+                              key={link.href}
+                              variant="outline-dark"
+                            >
+                              {link.text}
+                            </Button>
+                          );
+                        })}
+                      </Card.Body>
+                      <Card.Footer>
+                        {item.tags.map((tag) => {
+                          return (
+                            <Badge
+                              style={styles.buttonsSpace}
+                              key={tag}
+                              bg="dark"
+                            >
+                              {tag}
+                            </Badge>
+                          );
+                        })}
+                        <Badge bg="dark" text="testing">
+                          testing
+                        </Badge>
+                      </Card.Footer>
+                    </Card>
                   );
                 })}
               </Row>
