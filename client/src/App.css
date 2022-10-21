@@ -23,4 +23,8 @@ a:link {
 
 .timeline {
   margin: 0px !important;
+  /* box-shadow: 12px 0 15px -4px rgba(2, 163, 188, 0.16),
+    -12px 0 8px -4px rgba(2, 163, 188, 0.16),
+    12px 0 15px -4px rgba(5, 5, 5, 0.189) inset,
+    -12px 0 8px -4px rgba(2, 163, 188, 0.16) inset; */
 }

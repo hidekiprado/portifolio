@@ -12,7 +12,19 @@ const styles = {
   },
   activeStyle: {
     color: "#02A3BC",
-    padding: "8px",
+    padding: "1em 1em",
+    fontSize: "large",
+    fontWeight: "600",
+    borderRadius: "5em",
+    boxShadow:
+      "12px 0 15px -4px rgba(5, 5, 5, 0.189),-12px 0 8px -4px rgba(2, 163, 188, 0.16), 12px 0 15px -4px rgba(5, 5, 5, 0.189) inset,-12px 0 8px -4px rgba(2, 163, 188, 0.16) inset",
+    transition: "1s",
+  },
+  defaultStyle: {
+    padding: "1em 1em",
+    fontSize: "large",
+    fontWeight: "600",
+    transition: "1s",
   },
 };
 
@@ -48,11 +60,16 @@ const Header = () => {
           <Nav>
             {data &&
               data.sections?.map((section, index) => (
-                <Nav.Item style={{ alignSelf: "center" }} key={index}>
+                <Nav.Item
+                  style={{
+                    alignSelf: "center",
+                  }}
+                  key={index}
+                >
                   <NavLink
                     className="nav-link"
                     style={({ isActive }) =>
-                      isActive ? styles.activeStyle : null
+                      isActive ? styles.activeStyle : styles.defaultStyle
                     }
                     to={section.href}
                   >
