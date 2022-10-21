@@ -46,6 +46,7 @@ const Home = () => {
               <h1 style={styles.nameStyle}>{data?.name}</h1>
               <div style={styles.typeWriterContainer}>
                 <h2 style={styles.inlineChild}>I'm&nbsp;</h2>
+
                 <Typewriter
                   options={{
                     loop: true,

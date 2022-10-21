@@ -1,5 +1,5 @@
 import "./App.css";
-import Login from "./components/Login";
+// import Login from "./components/Login";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -22,7 +22,7 @@ const App = () => {
       <AppContext.Provider value={{ darkMode }}>
         <Header />
         <Routes>
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
