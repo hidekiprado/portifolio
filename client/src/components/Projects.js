@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button, Card, Badge } from "react-bootstrap";
+import { Container, Row, Button, Card, Badge } from "react-bootstrap";
 import { Fade } from "react-awesome-reveal";
 import React, { useEffect, useState } from "react";
 import endPoints from "../constants/endPoints";

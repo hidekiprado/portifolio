@@ -8,8 +8,7 @@ const styles = {
   infoContainer: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-around",
-    gap: "0.9vh",
+    gap: "1.9vh",
   },
   iconStyle: {
     height: 75,
@@ -23,7 +22,7 @@ const styles = {
     textAlign: "center",
     margin: "0 0.2em",
   },
-  faceImageStyle: { maxWidth: "90%", margin: "10px", borderRadius: "1em" },
+  faceImageStyle: { maxWidth: "75%", margin: "10px", borderRadius: "1em" },
 };
 
 function About() {
@@ -42,7 +41,7 @@ function About() {
     <>
       {/* <h1>About</h1> */}
       <div className="main-container">
-        <Container>
+        <Container style={{ height: "90vh" }}>
           <Fade>
             <h1>About</h1>
           </Fade>
