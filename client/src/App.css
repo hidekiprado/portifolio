@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.207) 0%,
+    rgba(188, 8, 2, 0.012) 50%,
+    rgba(255, 255, 255, 0.299) 100%
+  );
 }
 .navbar {
   font-size: large;

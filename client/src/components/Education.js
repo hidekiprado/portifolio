@@ -15,11 +15,12 @@ const Education = () => {
 
   const [data, setData] = useState(null);
   const [mode, setMode] = useState("VERTICAL_ALTERNATING");
-  const [theme, setTheme] = useState(isDarkMode);
+  const [theme, setTheme] = useState(lightTheme);
 
   useEffect(() => {
-    return isDarkMode ? setTheme(darkTheme) : setTheme(lightTheme);
-  }, [isDarkMode]);
+    isDarkMode ? setTheme(darkTheme) : setTheme(lightTheme);
+    console.log("from Education", theme);
+  }, [theme, isDarkMode]);
 
   useEffect(() => {
     fetch(endPoints.education, {
