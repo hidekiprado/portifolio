@@ -1,17 +1,17 @@
-#Professional Portfolio
+# Professional Portfolio
 
-##Intro
+## Intro
 
 A single page application with a collection of my work and my professional experience abilities.
 
-##Technologies used and components.
+## Technologies used and components.
 
 - React
 - Bootstrap
 - NodeJS
 - PostgresSQL
 
-##Pages
+## Pages
 
 - Home
 - About
@@ -21,12 +21,12 @@ A single page application with a collection of my work and my professional exper
 - Projects
 - Contact
 
-##Functionalities
+## Functionalities
 
 - Send emails from page Contact
 - Saves messages in an PostgresSQL server.
 
 
-##To be Known
+## To be Known
 
 - Sending emails is set only with an .env file.
