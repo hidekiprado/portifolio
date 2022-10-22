@@ -5,7 +5,6 @@ import AppContext from "../AppContext";
 function ThemeToggler(props) {
   const handleOnChange = (darkMode) => {
     darkMode.toggle();
-    console.log("from Theme", darkMode.value);
   };
 
   return (

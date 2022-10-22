@@ -10,7 +10,6 @@ import { lightTheme, darkTheme } from "../theme/themes";
 const Education = () => {
   // Component ThemeToggler is the context consumer with the button DarkModeToggle
   // the Provider is on the App.js
-
   const isDarkMode = useContext(AppContext).darkMode.value;
 
   const [data, setData] = useState(null);
@@ -19,8 +18,7 @@ const Education = () => {
 
   useEffect(() => {
     isDarkMode ? setTheme(darkTheme) : setTheme(lightTheme);
-    console.log("from Education", theme);
-  }, [theme, isDarkMode]);
+  }, [isDarkMode]);
 
   useEffect(() => {
     fetch(endPoints.education, {
@@ -40,10 +38,10 @@ const Education = () => {
       <div className="main-container">
         <Container>
           <Fade>
-            <h1>Education</h1>
+            <h1 style={{ color: theme.fontColor }}>Education</h1>
           </Fade>
           <br />
-          {data && theme ? (
+          {data ? (
             <Fade>
               <Chrono
                 allowDynamicUpdate
@@ -52,17 +50,10 @@ const Education = () => {
                 cardHeight={250}
                 mode={mode}
                 scrollable={true}
-                theme={{
-                  primary: "#02A3BC",
-                  secondary: "#02A3BC",
-                  cardBgColor: "#dedede",
-                  cardForeColor: "#2b2b2b",
-                  titleColor: "#2b2b2b",
-                  titleColorActive: theme.fontColor, //special black
-                }}
+                theme={theme.chronoTheme}
               >
                 <div className="chrono-icons">
-                  {data?.education.map((education) =>
+                  {data.education.map((education) =>
                     education.icon ? (
                       <img
                         key={education.icon.src}

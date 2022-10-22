@@ -78,7 +78,7 @@ const Header = () => {
                 </Nav.Item>
               ))}
           </Nav>{" "}
-          <div style={{ margin: "0em 3em" }}>
+          <div style={{ margin: "0em 2em" }}>
             <ThemeToggler />
           </div>
         </Navbar.Collapse>

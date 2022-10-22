@@ -1,5 +1,5 @@
-import "./App.css";
 // import Login from "./components/Login";
+import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -11,14 +11,22 @@ import ContactMe from "./components/ContactMe";
 import { Routes, Route } from "react-router-dom";
 import AppContext from "./AppContext";
 import useDarkMode from "use-dark-mode";
+import { lightTheme, darkTheme } from "./theme/themes";
+import React, { useEffect, useState } from "react";
 
 const App = () => {
   const darkMode = useDarkMode(true);
+  const [theme, setTheme] = useState(lightTheme);
 
-  console.log("from APP", darkMode.value);
+  useEffect(() => {
+    darkMode.value ? setTheme(darkTheme) : setTheme(lightTheme);
+  }, [darkMode]);
 
   return (
-    <div className="App">
+    <div
+      style={{ backgroundColor: theme.backGroundColor, color: theme.fontColor }}
+      className="App"
+    >
       <AppContext.Provider value={{ darkMode }}>
         <Header />
         <Routes>

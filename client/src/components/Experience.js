@@ -1,12 +1,23 @@
 import { Container } from "react-bootstrap";
 import { Fade } from "react-awesome-reveal";
 import { Timeline, TimelineItem } from "vertical-timeline-component-for-react";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import endPoints from "../constants/endPoints";
 import MainSpinner from "./MainSpinner";
+import { lightTheme, darkTheme } from "../theme/themes";
+import AppContext from "../AppContext";
 
 const Experience = () => {
+  // Component ThemeToggler is the context consumer with the button DarkModeToggle
+  // the Provider is on the App.js
+  const isDarkMode = useContext(AppContext).darkMode.value;
+
   const [data, setData] = useState(null);
+  const [theme, setTheme] = useState(lightTheme);
+
+  useEffect(() => {
+    isDarkMode ? setTheme(darkTheme) : setTheme(lightTheme);
+  }, [isDarkMode]);
 
   useEffect(() => {
     fetch(endPoints.experiences, {
@@ -33,22 +44,21 @@ const Experience = () => {
                       <TimelineItem
                         dateText="04/2009 – 11/2010"
                         dateInnerStyle={{
-                          background: "#02A3BC",
-                          color: "#2b2b2b",
+                          background: theme.standardBlue,
+                          color: theme.fontColor,
                         }}
                         bodyContainerStyle={{
-                          background: "#ddd",
+                          background: theme.timelineLineColor,
+                          color: theme.fontColor,
                           padding: "20px",
                           borderRadius: "8px",
                         }}
                       >
                         <h3>{item.title}</h3>
                         <br />
-                        <h4 style={{ color: "#02A3BC" }}>
+                        <h4 style={{ color: theme.standardBlue }}>
                           {item.company}-{" "}
-                          <span style={{ color: "#2b2b2b" }}>
-                            {item.workType}
-                          </span>
+                          <span style={{ color: "gray" }}>{item.workType}</span>
                         </h4>
                         <br />
                         <h5>{item.technologiesTitle}</h5>

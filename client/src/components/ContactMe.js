@@ -1,10 +1,21 @@
 import { Form, Button } from "react-bootstrap";
 import { Container, Row, Col } from "react-bootstrap";
 import { Fade } from "react-awesome-reveal";
-import React, { useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import AppContext from "../AppContext";
+import { lightTheme, darkTheme } from "../theme/themes";
 
 const ContactMe = () => {
+  // Component ThemeToggler is the context consumer with the button DarkModeToggle
+  // the Provider is on the App.js
+  const isDarkMode = useContext(AppContext).darkMode.value;
+
   const [response, setResponse] = useState(null);
+  const [theme, setTheme] = useState(lightTheme);
+
+  useEffect(() => {
+    isDarkMode ? setTheme(darkTheme) : setTheme(lightTheme);
+  }, [isDarkMode]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -78,14 +89,18 @@ const ContactMe = () => {
                         placeholder="Message"
                       />
                     </Form.Group>
-                    <Button size="lg" variant="dark" type="submit">
+                    <Button
+                      size="lg"
+                      variant={theme.themeSecondVariante}
+                      type="submit"
+                    >
                       Send
                     </Button>{" "}
                     <Button
                       target="_blank"
                       href="https://drive.google.com/file/d/1pAv1iozTNpzcwlNnViGG4MQi3BK6xhBw/view?usp=sharing"
                       size="lg"
-                      variant="outline-dark"
+                      variant={"outline-" + theme.themeSecondVariante}
                     >
                       Download Resume
                     </Button>

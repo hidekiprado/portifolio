@@ -1,10 +1,12 @@
 import { Fade } from "react-awesome-reveal";
 import Typewriter from "typewriter-effect";
 import { SocialIcon } from "react-social-icons";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import endPoints from "../constants/endPoints";
 import { Container } from "react-bootstrap";
 import MainSpinner from "./MainSpinner";
+import AppContext from "../AppContext";
+import { lightTheme, darkTheme } from "../theme/themes";
 
 const styles = {
   nameStyle: {
@@ -28,7 +30,16 @@ const styles = {
   },
 };
 function Home() {
+  // Component ThemeToggler is the context consumer with the button DarkModeToggle
+  // the Provider is on the App.js
+  const isDarkMode = useContext(AppContext).darkMode.value;
+
   const [data, setData] = useState(null);
+  const [theme, setTheme] = useState(lightTheme);
+
+  useEffect(() => {
+    isDarkMode ? setTheme(darkTheme) : setTheme(lightTheme);
+  }, [isDarkMode]);
 
   useEffect(() => {
     fetch(endPoints.home, {
@@ -64,6 +75,7 @@ function Home() {
                           url={icon.href}
                           target="_blank"
                           rel="SocialIcon"
+                          bgColor={theme.socialIconsBgColor}
                         />
                       </div>
                     );
