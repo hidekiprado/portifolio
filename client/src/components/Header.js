@@ -15,9 +15,6 @@ const styles = {
     padding: "1em 1em",
     fontSize: "large",
     fontWeight: "600",
-    borderRadius: "2em 2em 0.2em 0.2em ",
-    boxShadow:
-      "-12px 0 8px -4px rgba(2, 163, 188, 0.16), -12px 0 8px -4px rgba(2, 163, 188, 0.16) inset",
     transition: "1s",
   },
   defaultStyle: {
@@ -25,6 +22,7 @@ const styles = {
     fontSize: "large",
     fontWeight: "600",
     transition: "1s",
+    borderRadius: "2em",
   },
 };
 
@@ -39,6 +37,14 @@ const Header = () => {
       .then((res) => setData(res))
       .catch((err) => err);
   }, []);
+
+  function MouseOver(event) {
+    event.target.style.boxShadow =
+      "-12px 0 8px -4px rgba(2, 163, 188, 0.16), -12px 0 8px -4px rgba(2, 163, 188, 0.16) inset";
+  }
+  function MouseOut(event) {
+    event.target.style.boxShadow = "";
+  }
 
   return (
     <Navbar sticky="top" variant="dark" bg="dark" expand="lg">
@@ -67,6 +73,8 @@ const Header = () => {
                   key={index}
                 >
                   <NavLink
+                    onMouseOver={MouseOver}
+                    onMouseOut={MouseOut}
                     className="nav-link"
                     style={({ isActive }) =>
                       isActive ? styles.activeStyle : styles.defaultStyle

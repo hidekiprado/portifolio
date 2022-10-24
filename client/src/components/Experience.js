@@ -32,7 +32,7 @@ const Experience = () => {
       <div className="main-container">
         <Container>
           <Fade>
-            <h1>Experience</h1>
+            <h1>{data?.mainTitle}</h1>
           </Fade>
           {data ? (
             <Timeline lineColor={"#ddd"}>
