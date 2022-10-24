@@ -34,11 +34,10 @@ const Education = () => {
   }, []);
   return (
     <>
-      {/* <h1>Education</h1> */}
       <div className="main-container">
         <Container>
           <Fade>
-            <h1 style={{ color: theme.fontColor }}>Education</h1>
+            <h1 style={{ color: theme.fontColor }}>{data?.mainTitle}</h1>
           </Fade>
           <br />
           {data ? (

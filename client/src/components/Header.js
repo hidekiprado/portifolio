@@ -15,9 +15,9 @@ const styles = {
     padding: "1em 1em",
     fontSize: "large",
     fontWeight: "600",
-    borderRadius: "5em",
+    borderRadius: "2em 2em 0.2em 0.2em ",
     boxShadow:
-      "12px 0 15px -4px rgba(5, 5, 5, 0.189),-12px 0 8px -4px rgba(2, 163, 188, 0.16), 12px 0 15px -4px rgba(5, 5, 5, 0.189) inset,-12px 0 8px -4px rgba(2, 163, 188, 0.16) inset",
+      "-12px 0 8px -4px rgba(2, 163, 188, 0.16), -12px 0 8px -4px rgba(2, 163, 188, 0.16) inset",
     transition: "1s",
   },
   defaultStyle: {

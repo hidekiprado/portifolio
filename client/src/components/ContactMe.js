@@ -38,7 +38,6 @@ const ContactMe = () => {
 
   return (
     <>
-      {/* <h1>Contact</h1> */}
       <div className="main-container">
         <Container>
           <Fade>
@@ -57,6 +56,10 @@ const ContactMe = () => {
                     <Form.Group className="mb-3" controlId="formBasicName">
                       <Form.Label>Name</Form.Label>
                       <Form.Control
+                        required
+                        oninvalid="this.setCustomValidity('Please Enter valid email')"
+                        oninput="setCustomValidity('')"
+                        aria-label="Name"
                         name="name"
                         size="lg"
                         type="text"
@@ -66,6 +69,8 @@ const ContactMe = () => {
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                       <Form.Label>Email address</Form.Label>
                       <Form.Control
+                        required
+                        aria-label="Email address"
                         name="email"
                         size="lg"
                         type="email"
@@ -81,6 +86,8 @@ const ContactMe = () => {
                     >
                       <Form.Label>Message</Form.Label>
                       <Form.Control
+                        required
+                        aria-label="Message"
                         name="message"
                         size="lg"
                         as="textarea"

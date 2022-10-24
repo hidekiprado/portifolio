@@ -17,9 +17,12 @@ const styles = {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+    fontSize: "calc(1.325rem + .9vw)", //same size as a H2 tag
+    fontWeight: "500",
   },
   inlineChild: {
     display: "inline-block",
+    margin: "0px",
   },
   homeMainContainer: {
     display: "flex",
@@ -63,12 +66,12 @@ function Home() {
                     options={{
                       loop: true,
                       autoStart: true,
-                      strings: data?.roles,
+                      strings: data.roles,
                     }}
                   />
                 </div>
                 <div style={{ display: "flex", gap: ".5rem" }}>
-                  {data?.social.map((icon) => {
+                  {data.social.map((icon) => {
                     return (
                       <div key={icon.network}>
                         <SocialIcon

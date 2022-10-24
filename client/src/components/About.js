@@ -1,8 +1,10 @@
 import { Container, Col, Row } from "react-bootstrap";
 import { Fade } from "react-awesome-reveal";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import endPoints from "../constants/endPoints";
 import MainSpinner from "./MainSpinner";
+import { lightTheme, darkTheme } from "../theme/themes";
+import AppContext from "../AppContext";
 
 const styles = {
   infoContainer: {
@@ -26,7 +28,16 @@ const styles = {
 };
 
 function About() {
+  // Component ThemeToggler is the context consumer with the button DarkModeToggle
+  // the Provider is on the App.js
+  const isDarkMode = useContext(AppContext).darkMode.value;
+
   const [data, setData] = useState(null);
+  const [theme, setTheme] = useState(lightTheme);
+
+  useEffect(() => {
+    isDarkMode ? setTheme(darkTheme) : setTheme(lightTheme);
+  }, [isDarkMode]);
 
   useEffect(() => {
     fetch(endPoints.about, {
@@ -39,27 +50,27 @@ function About() {
 
   return (
     <>
-      {/* <h1>About</h1> */}
       <div className="main-container">
         <Container style={{ height: "90vh" }}>
           <Fade>
-            <h1>About</h1>
+            <h1>{data?.mainTitle}</h1>
           </Fade>
           <br />
           {data ? (
             <Fade>
               <Row>
                 <Col lg={true} style={styles.infoContainer}>
-                  <h3>{data?.aboutTitle}</h3>
-                  <p>{data?.about}</p>
-                  <h3>{data?.interests}</h3>
-                  <p>{data?.interestsContent}</p>
-                  <h3>{data?.recreationTitle}</h3>
+                  <h3>{data.aboutTitle}</h3>
+                  <p>{data.about}</p>
+                  <h3>{data.interests}</h3>
+                  <p>{data.interestsContent}</p>
+                  <h3>{data.recreationTitle}</h3>
                   <div>
-                    {data?.recreations.map((row, index) => {
+                    {data.recreations.map((row, index) => {
                       return (
                         <div style={styles.iconContainer} key={index}>
                           <img
+                            data-testid={row.title}
                             style={styles.iconStyle}
                             src={row.icon}
                             alt="recreation"
@@ -72,8 +83,13 @@ function About() {
                 </Col>
                 <Col>
                   <img
+                    data-testid="self-image"
                     style={styles.faceImageStyle}
-                    src={data?.image}
+                    src={
+                      isDarkMode
+                        ? data?.profileDarkMode
+                        : data?.profileLightMode
+                    }
                     alt="self"
                   />
                 </Col>

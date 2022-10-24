@@ -25,14 +25,13 @@ const Skills = () => {
   }, []);
   return (
     <>
-      {/* <h1>Skills</h1> */}
       <div className="main-container">
         <Container>
           <Fade>
-            <h1>Skills</h1>
+            <h1>{data?.mainTitle}</h1>
           </Fade>
           {data ? (
-            <Fade duration="2000">
+            <Fade>
               <Zoom>
                 <br />
                 <p>{data.intro}</p>
@@ -48,6 +47,7 @@ const Skills = () => {
                               key={item.title}
                             >
                               <img
+                                data-testid={item.title}
                                 style={styles.iconStyle}
                                 src={item.icon}
                                 alt={item.title}

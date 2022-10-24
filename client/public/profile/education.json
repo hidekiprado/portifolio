@@ -1,9 +1,9 @@
 {
+  "mainTitle": "Education",
   "education": [
     {
       "title": "Apr 2022 - Oct 2022",
       "cardTitle": "Software Engineering",
-      "url": "https://generalassemb.ly/education/software-engineering-immersive/sydney?topic=&mkt_account_id=1056949875&mkt_campaign_id=18014985978&mkt_ad_group_id=143659600487&mkt_device_type=c&mkt_keyword=software%20engineer%20general%20assembly&mkt_matchtype=e&mkt_placement=&mkt_ad_id=619148936159&mkt_network=g&mkt_target_id=kwd-865210826762&mkt_feed_item_id=&utm_source=google&utm_medium=paid-search-bra&utm_campaign=TS:TX:BRA:SYD:BR:GeneralAssembly:X:Exact&utm_content=campus-lead-lander&utm_term=software%20engineer%20general%20assembly&gclid=CjwKCAjw-rOaBhA9EiwAUkLV4n1gvLzCfe01mHdsKihyZ9zxkn3T58mCLdL9t3cUoQzijkqQfSsGqhoCQNcQAvD_BwE&gclsrc=aw.ds",
       "cardSubtitle": "General Assembly",
       "cardDetailedText": "React, Jest, AXIOS, HTM/CSS, Javascript, NodeJS, JSON, API, REST, SOAP, Python, Flask, Postgres, Git",
       "icon": {

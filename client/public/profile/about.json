@@ -1,4 +1,5 @@
 {
+  "mainTitle": "About",
   "aboutTitle": "Versatile Software Engineer",
   "about": "Amateur inventor equipped with a bachelor’s degree in Computer Science, a postgraduate degree in Project Management (specialised on PMBOK) and 6 years of professional experience as a Java and SQL Developer, I apply analytic thinking and systematic approach to problem-solving. My strong Agile-driven and Object-oriented system design capability and coding experience in Java 8, JavaScript, SQL give me confidence to work with all other programming languages.",
   "interests": "Interests and activities",
@@ -22,5 +23,6 @@
       "title": "Speed Cubing"
     }
   ],
-  "image": "images/about/profile.png"
+  "profileLightMode": "images/about/profile-lightMode.png",
+  "profileDarkMode": "images/about/profile-darkMode.png"
 }
