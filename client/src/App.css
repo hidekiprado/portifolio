@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  height: 200vh;
+  min-height: 100vh;
   transition: 1s;
 }
 .navbar {
@@ -19,4 +19,5 @@ a:link {
 
 .timeline {
   margin: 0px !important;
+  color: #9fc3c896;
 }
