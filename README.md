@@ -25,7 +25,11 @@ A single page application with a collection of my work and my professional exper
 
 - Send emails from page Contact
 - Saves messages in an PostgresSQL server.
+- Dark mode switch
 
+#### Future Functionalities
+- Save messages from PostgresSQL server
+- Delete messages from PostgresSQL server
 
 ## To be Known
 
