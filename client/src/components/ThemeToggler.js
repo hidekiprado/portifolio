@@ -3,8 +3,10 @@ import DarkModeToggle from "react-dark-mode-toggle";
 import AppContext from "../AppContext";
 
 function ThemeToggler(props) {
+  const { onClick } = props;
   const handleOnChange = (darkMode) => {
     darkMode.toggle();
+    onClick();
   };
 
   return (

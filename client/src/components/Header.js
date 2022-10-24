@@ -16,6 +16,7 @@ const styles = {
     fontSize: "large",
     fontWeight: "600",
     transition: "1s",
+    textShadow: "0.7px 0.7px #9fc3c896",
   },
   defaultStyle: {
     padding: "1em 1em",
@@ -28,6 +29,7 @@ const styles = {
 
 const Header = () => {
   const [data, setData] = useState(null);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     fetch(endPoints.header, {
@@ -47,7 +49,13 @@ const Header = () => {
   }
 
   return (
-    <Navbar sticky="top" variant="dark" bg="dark" expand="lg">
+    <Navbar
+      expanded={expanded}
+      sticky="top"
+      variant="dark"
+      bg="dark"
+      expand="lg"
+    >
       <Container>
         <Navbar.Brand>
           <img
@@ -58,7 +66,10 @@ const Header = () => {
             alt="main logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle
+          onClick={() => setExpanded(!expanded)}
+          aria-controls="responsive-navbar-nav"
+        />
         <Navbar.Collapse
           className="justify-content-center"
           id="responsive-navbar-nav"
@@ -76,6 +87,7 @@ const Header = () => {
                     onMouseOver={MouseOver}
                     onMouseOut={MouseOut}
                     className="nav-link"
+                    onClick={() => setExpanded(false)}
                     style={({ isActive }) =>
                       isActive ? styles.activeStyle : styles.defaultStyle
                     }
@@ -87,7 +99,7 @@ const Header = () => {
               ))}
           </Nav>{" "}
           <div style={{ margin: "0em 2em" }}>
-            <ThemeToggler />
+            <ThemeToggler onClick={() => setExpanded(false)} />
           </div>
         </Navbar.Collapse>
       </Container>

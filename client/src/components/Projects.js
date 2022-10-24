@@ -70,7 +70,7 @@ const Projects = () => {
                               target="_blank"
                               href={link.href}
                               key={link.href}
-                              variant={theme.themeSecondVariante}
+                              variant={"outline-" + theme.themeSecondVariante}
                             >
                               {link.text}
                             </Button>
@@ -88,7 +88,7 @@ const Projects = () => {
                               style={styles.buttonsSpace}
                               key={tag}
                               pill
-                              bg={theme.themeSecondVariante}
+                              bg="secondary"
                               text={theme.themeFirtVariante}
                             >
                               {tag}
