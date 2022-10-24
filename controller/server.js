@@ -31,7 +31,7 @@ app.post("/api/contact", async (req, res) => {
 //system to access from 3000 port frontEnd
 app.get("*", (req, res) => {
   res.setHeader("content-type", "text/html");
-  fs.createReadStream(`${__dirname}/client/build/index.html`).pipe(res);
+  fs.createReadStream(`${__dirname}/../client/build/index.html`).pipe(res);
 });
 
 app.listen(port, () => console.log(`Listening at localhost:${port}`));
