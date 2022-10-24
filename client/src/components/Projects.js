@@ -52,7 +52,7 @@ const Projects = () => {
                     <Card
                       key={item.title}
                       style={{
-                        width: "24rem",
+                        width: "18rem",
                         padding: "0px",
                         borderStyle: "none",
                       }}
