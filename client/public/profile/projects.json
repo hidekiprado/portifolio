@@ -63,6 +63,29 @@
         "Heroku",
         "Bcrypt"
       ]
+    },
+    {
+      "image": "images/projects/portfolio.png",
+      "title": "My Recipes",
+      "bodyText": "- My forth project using skills acquired at General Assembly (Software Engineering )",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/hidekiprado/portifolio"
+        },
+        {
+          "text": "Live",
+          "href": "https://pure-atoll-48332.herokuapp.com/"
+        }
+      ],
+      "tags": [
+        "React",
+        "NodeJS",
+        "JavaScript",
+        "Heroku",
+        "PostgreSQL",
+        "Bcrypt"
+      ]
     }
   ]
 }
