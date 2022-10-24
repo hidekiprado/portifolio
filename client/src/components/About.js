@@ -51,7 +51,7 @@ function About() {
   return (
     <>
       <div className="main-container">
-        <Container style={{ height: "90vh" }}>
+        <Container>
           <Fade>
             <h1>{data?.mainTitle}</h1>
           </Fade>
