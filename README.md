@@ -23,7 +23,7 @@ A single page application with a collection of my work and my professional exper
 
 ## Functionalities
 
-- Send emails from page Contact
+- Send emails from Contact page.
 - Saves messages in an PostgresSQL server.
 - Dark mode switch
 - Dynamic end points to access data by using Json files
@@ -32,6 +32,11 @@ A single page application with a collection of my work and my professional exper
 #### Future Functionalities
 
 - Delete messages from PostgresSQL server
+
+## Testing
+
+- Testing-library/react
+- Setting up server using msw/node
 
 ## To be Known
 
