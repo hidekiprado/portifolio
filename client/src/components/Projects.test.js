@@ -102,8 +102,6 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
-test("first test", () => {});
-
 test("Title Projects/h1 has to be on the screen", async () => {
   render(
     <AppContext.Provider value={{ darkMode }}>

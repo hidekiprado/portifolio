@@ -75,10 +75,12 @@ function Home() {
                     return (
                       <div key={icon.network}>
                         <SocialIcon
+                          data-testid={icon.network}
                           url={icon.href}
                           target="_blank"
                           rel="SocialIcon"
                           bgColor={theme.socialIconsBgColor}
+                          alt={icon.network}
                         />
                       </div>
                     );

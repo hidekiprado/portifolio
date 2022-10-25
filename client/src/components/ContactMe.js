@@ -57,8 +57,7 @@ const ContactMe = () => {
                       <Form.Label>Name</Form.Label>
                       <Form.Control
                         required
-                        oninvalid="this.setCustomValidity('Please Enter valid email')"
-                        oninput="setCustomValidity('')"
+                        data-testid="name"
                         aria-label="Name"
                         name="name"
                         size="lg"
@@ -70,6 +69,7 @@ const ContactMe = () => {
                       <Form.Label>Email address</Form.Label>
                       <Form.Control
                         required
+                        data-testid="email"
                         aria-label="Email address"
                         name="email"
                         size="lg"
@@ -87,6 +87,7 @@ const ContactMe = () => {
                       <Form.Label>Message</Form.Label>
                       <Form.Control
                         required
+                        data-testid="message"
                         aria-label="Message"
                         name="message"
                         size="lg"
