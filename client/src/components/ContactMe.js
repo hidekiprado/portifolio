@@ -57,6 +57,7 @@ const ContactMe = () => {
                       <Form.Label>Name</Form.Label>
                       <Form.Control
                         required
+                        style={{ backgroundColor: theme?.backGroundColor }}
                         data-testid="name"
                         aria-label="Name"
                         name="name"
@@ -69,6 +70,7 @@ const ContactMe = () => {
                       <Form.Label>Email address</Form.Label>
                       <Form.Control
                         required
+                        style={{ backgroundColor: theme?.backGroundColor }}
                         data-testid="email"
                         aria-label="Email address"
                         name="email"
@@ -87,6 +89,7 @@ const ContactMe = () => {
                       <Form.Label>Message</Form.Label>
                       <Form.Control
                         required
+                        style={{ backgroundColor: theme?.backGroundColor }}
                         data-testid="message"
                         aria-label="Message"
                         name="message"
@@ -99,7 +102,7 @@ const ContactMe = () => {
                     </Form.Group>
                     <Button
                       size="lg"
-                      variant={theme.themeSecondVariante}
+                      variant={theme?.themeSecondVariante}
                       type="submit"
                     >
                       Send
