@@ -35,43 +35,47 @@ const Experience = () => {
             <h1>{data?.mainTitle}</h1>
           </Fade>
           {data ? (
-            <Timeline lineColor={"#ddd"}>
+            <div>
               <Fade>
-                {data.experiences.map((item, index) => {
-                  return (
-                    <div key={index}>
-                      <TimelineItem
-                        dateText="04/2009 – 11/2010"
-                        dateInnerStyle={{
-                          background: theme.standardBlue,
-                          color: theme.fontColor,
-                        }}
-                        bodyContainerStyle={{
-                          background: theme.timelineLineColor,
-                          color: theme.fontColor,
-                          padding: "20px",
-                          borderRadius: "8px",
-                        }}
-                      >
-                        <h3>{item.title}</h3>
-                        <br />
-                        <h4 style={{ color: theme.standardBlue }}>
-                          {item.company}-{" "}
-                          <span style={{ color: "gray" }}>{item.workType}</span>
-                        </h4>
-                        <br />
-                        <h5>{item.technologiesTitle}</h5>
-                        <p>{item.technologies}</p>
-                        <h5>{item.descriptionTitle}</h5>
-                        {item.description.map((row) => {
-                          return <p key={row}>{row}</p>;
-                        })}
-                      </TimelineItem>
-                    </div>
-                  );
-                })}
+                <Timeline lineColor={"#ddd"}>
+                  {data.experiences.map((item, index) => {
+                    return (
+                      <div key={index}>
+                        <TimelineItem
+                          dateText="04/2009 – 11/2010"
+                          dateInnerStyle={{
+                            background: theme.standardBlue,
+                            color: theme.fontColor,
+                          }}
+                          bodyContainerStyle={{
+                            background: theme.timelineLineColor,
+                            color: theme.fontColor,
+                            padding: "20px",
+                            borderRadius: "8px",
+                          }}
+                        >
+                          <h3>{item.title}</h3>
+                          <br />
+                          <h4 style={{ color: theme.standardBlue }}>
+                            {item.company}-{" "}
+                            <span style={{ color: "gray" }}>
+                              {item.workType}
+                            </span>
+                          </h4>
+                          <br />
+                          <h5>{item.technologiesTitle}</h5>
+                          <p>{item.technologies}</p>
+                          <h5>{item.descriptionTitle}</h5>
+                          {item.description.map((row) => {
+                            return <p key={row}>{row}</p>;
+                          })}
+                        </TimelineItem>
+                      </div>
+                    );
+                  })}
+                </Timeline>
               </Fade>
-            </Timeline>
+            </div>
           ) : (
             <MainSpinner />
           )}
