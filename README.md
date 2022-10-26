@@ -4,6 +4,8 @@
 
 A single page application with a collection of my work and my professional experience abilities.
 
+![portfolio-gif](https://user-images.githubusercontent.com/104890292/198157067-84e255d3-7264-4adb-97ca-e5a7da0522f9.gif)
+
 ## Technologies used and components.
 
 - React
