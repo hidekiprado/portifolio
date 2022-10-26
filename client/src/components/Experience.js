@@ -36,7 +36,7 @@ const Experience = () => {
           </Fade>
           {data ? (
             <Timeline lineColor={"#ddd"}>
-              <Fade direction="left" cascade={true}>
+              <Fade>
                 {data.experiences.map((item, index) => {
                   return (
                     <div key={index}>
