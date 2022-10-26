@@ -2,7 +2,7 @@ export const lightTheme = {
   themeFirtVariante: "light",
   themeSecondVariante: "dark",
   fontColor: "#222121", // black
-  backGroundColor: "#eee", //white
+  backGroundColor: "rgba(238, 238, 238, 0.888)", //white
   standardBlue: "#02A3BC",
   standardGray: "#dedede",
   chronoTheme: {
@@ -23,7 +23,7 @@ export const darkTheme = {
   themeFirtVariante: "dark",
   themeSecondVariante: "light",
   fontColor: "#eee", // white
-  backGroundColor: "#222121", // black
+  backGroundColor: "#222121cd", // black
   standardBlue: "#02A3BC",
   standardGray: "#dedede",
   chronoTheme: {

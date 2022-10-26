@@ -20,4 +20,18 @@ a:link {
 .timeline {
   margin: 0px !important;
   color: #9fc3c896;
+  color: #222121cd;
+}
+
+@keyframes pan {
+  100% {
+    background-position: 15% 50%;
+  }
+}
+
+body {
+  background-image: url("back.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: pan 6s infinite alternate linear;
 }

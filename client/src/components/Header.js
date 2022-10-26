@@ -60,6 +60,7 @@ const Header = () => {
       <Container>
         <Navbar.Brand>
           <img
+            data-testid="logo"
             to="/"
             style={styles.logo}
             src="logo.png"
@@ -76,8 +77,8 @@ const Header = () => {
           id="responsive-navbar-nav"
         >
           <Nav>
-            {data &&
-              data.sections?.map((section, index) => (
+            {data?.sections.map((section, index) => {
+              return (
                 <Nav.Item
                   style={{
                     alignSelf: "center",
@@ -85,6 +86,7 @@ const Header = () => {
                   key={index}
                 >
                   <NavLink
+                    role={"a"}
                     onMouseOver={MouseOver}
                     onMouseOut={MouseOut}
                     className="nav-link"
@@ -97,7 +99,8 @@ const Header = () => {
                     {section.title}
                   </NavLink>
                 </Nav.Item>
-              ))}
+              );
+            })}
           </Nav>{" "}
           <div style={{ margin: "0em 2em" }}>
             <ThemeToggler onClick={() => setExpanded(false)} />
