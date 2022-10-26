@@ -19,6 +19,7 @@ const styles = {
     alignItems: "center",
     fontSize: "calc(1.325rem + .9vw)", //same size as a H2 tag
     fontWeight: "500",
+    marginBottom: "1em",
   },
   inlineChild: {
     display: "inline-block",

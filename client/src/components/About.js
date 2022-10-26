@@ -24,7 +24,11 @@ const styles = {
     textAlign: "center",
     margin: "0 0.2em",
   },
-  faceImageStyle: { maxWidth: "75%", margin: "10px", borderRadius: "1em" },
+  faceImageStyle: {
+    maxWidth: "75%",
+    margin: "10px",
+    borderRadius: "1em",
+  },
 };
 
 function About() {

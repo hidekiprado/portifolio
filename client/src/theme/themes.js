@@ -1,7 +1,7 @@
 export const lightTheme = {
   themeFirtVariante: "light",
   themeSecondVariante: "dark",
-  fontColor: "#2b2b2b", // black
+  fontColor: "#222121", // black
   backGroundColor: "#eee", //white
   standardBlue: "#02A3BC",
   standardGray: "#dedede",
@@ -9,9 +9,9 @@ export const lightTheme = {
     primary: "#02A3BC",
     secondary: "#02A3BC",
     cardBgColor: "#fff",
-    cardForeColor: "#2b2b2b",
-    titleColor: "#2b2b2b",
-    titleColorActive: "#2b2b2b",
+    cardForeColor: "#222121",
+    titleColor: "#222121",
+    titleColorActive: "#222121",
   },
   socialIconsBgColor: null,
   timelineLineColor: "#fff",
