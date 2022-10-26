@@ -57,6 +57,10 @@
         {
           "icon": "images/skills/flask.png",
           "title": "Flask"
+        },
+        {
+          "icon": "images/skills/postman.png",
+          "title": "Postman"
         }
       ]
     },

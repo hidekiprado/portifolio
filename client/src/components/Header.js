@@ -17,6 +17,7 @@ const styles = {
     fontWeight: "600",
     transition: "1s",
     textShadow: "0.7px 0.7px #9fc3c896",
+    backGroundColor: "black",
   },
   defaultStyle: {
     padding: "1em 1em",
@@ -39,7 +40,7 @@ const Header = () => {
       .then((res) => setData(res))
       .catch((err) => err);
   }, []);
-
+  //HOVER
   function MouseOver(event) {
     event.target.style.boxShadow =
       "-12px 0 8px -4px rgba(2, 163, 188, 0.16), -12px 0 8px -4px rgba(2, 163, 188, 0.16) inset";
