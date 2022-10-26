@@ -2,7 +2,7 @@ export const lightTheme = {
   themeFirtVariante: "light",
   themeSecondVariante: "dark",
   fontColor: "#222121", // black
-  backGroundColor: "rgba(238, 238, 238, 0.888)", //white
+  backGroundColor: "rgba(238, 238, 238, 0.789)", //white
   standardBlue: "#02A3BC",
   standardGray: "#dedede",
   chronoTheme: {
@@ -10,19 +10,19 @@ export const lightTheme = {
     secondary: "#02A3BC",
     cardBgColor: "#fff",
     cardForeColor: "#222121",
-    titleColor: "#222121",
-    titleColorActive: "#222121",
+    titleColor: "#fff",
+    titleColorActive: "#fff",
   },
   socialIconsBgColor: null,
   timelineLineColor: "#fff",
-  cardBackground: "#fff",
+  cardBackground: "rgba(238, 238, 238, 0.789)", //white
   cardFooterBackground: "#f7f7f7",
   cardBorderColor: "#00000020",
 };
 export const darkTheme = {
   themeFirtVariante: "dark",
   themeSecondVariante: "light",
-  fontColor: "#eee", // white
+  fontColor: "#eee", // fake white
   backGroundColor: "#222121cd", // black
   standardBlue: "#02A3BC",
   standardGray: "#dedede",
@@ -32,11 +32,11 @@ export const darkTheme = {
     cardBgColor: "#2a3e3d",
     cardForeColor: "#eee",
     titleColor: "#eee",
-    titleColorActive: "#eee",
+    titleColorActive: "#eee", // fake white
   },
-  socialIconsBgColor: "#eee",
-  timelineLineColor: "#444",
-  cardBackground: "#060606",
+  socialIconsBgColor: "#eee", // fake white
+  timelineLineColor: "#2a3e3d",
+  cardBackground: "#060606", // black solid
   cardFooterBackground: "#181818",
   cardBorderColor: "#ffffff20",
 };

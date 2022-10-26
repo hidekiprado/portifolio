@@ -28,6 +28,7 @@ A single page application with a collection of my work and my professional exper
 - Dark mode switch
 - Dynamic end points to access data by using Json files
 - Responsive design
+- 100% aria-controls access
 
 #### Future Functionalities
 
@@ -36,7 +37,7 @@ A single page application with a collection of my work and my professional exper
 ## Testing
 
 - Testing-library/react
-- Setting up server using msw/node
+- Mocking server using msw/node
 
 ## To be Known
 
