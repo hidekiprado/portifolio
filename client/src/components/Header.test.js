@@ -56,40 +56,40 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
-test("to have seven itens in the navbar", async () => {
-  render(
-    <BrowserRouter>
-      <Header url="profile/header.json" />
-    </BrowserRouter>
-  );
+// test("to have seven itens in the navbar", async () => {
+//   render(
+//     <BrowserRouter>
+//       <Header url="profile/header.json" />
+//     </BrowserRouter>
+//   );
 
-  const aTags = await waitFor(() => screen.getAllByRole("a"));
-  expect(aTags).toHaveLength(7);
-});
-test("logo to be on the screen", async () => {
-  render(
-    <BrowserRouter>
-      <Header url="profile/header.json" />
-    </BrowserRouter>
-  );
-
-  const logo = await waitFor(() => screen.getByTestId("logo"));
-  expect(logo).toHaveAttribute("alt", "main logo");
-  expect(logo).toHaveAttribute("src", "logo.png");
-});
+//   const aTags = await waitFor(() => screen.getAllByRole("a"));
+//   expect(aTags).toHaveLength(7);
+// });
 // test("logo to be on the screen", async () => {
 //   render(
 //     <BrowserRouter>
-//       <AppContext.Provider value={{ darkMode }}>
-//         <Header url="profile/header.json">
-//           <AppContext.Consumer>
-//             <DarkModeToggle checked={true} />
-//           </AppContext.Consumer>
-//         </Header>
-//       </AppContext.Provider>
+//       <Header url="profile/header.json" />
 //     </BrowserRouter>
 //   );
+
 //   const logo = await waitFor(() => screen.getByTestId("logo"));
 //   expect(logo).toHaveAttribute("alt", "main logo");
 //   expect(logo).toHaveAttribute("src", "logo.png");
 // });
+test("logo to be on the screen", async () => {
+  render(
+    <BrowserRouter>
+      <AppContext.Provider value={{ darkMode }}>
+        <Header url="profile/header.json">
+          <AppContext.Consumer>
+            <DarkModeToggle checked={true} />
+          </AppContext.Consumer>
+        </Header>
+      </AppContext.Provider>
+    </BrowserRouter>
+  );
+  const logo = await waitFor(() => screen.getByTestId("logo"));
+  expect(logo).toHaveAttribute("alt", "main logo");
+  expect(logo).toHaveAttribute("src", "logo.png");
+});

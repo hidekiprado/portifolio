@@ -3,6 +3,12 @@
   min-height: 200vh;
   transition: 1s;
 }
+body {
+  background-image: url("back-groung.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: pan 6s infinite alternate linear;
+}
 .navbar {
   font-size: large;
   border-radius: 0.7rem;
@@ -22,16 +28,13 @@ a:link {
   color: #9fc3c896;
   color: #222121cd;
 }
+.timeline--wrapper {
+  display: flex;
+  justify-content: center;
+}
 
 @keyframes pan {
   100% {
     background-position: 15% 50%;
   }
-}
-
-body {
-  background-image: url("back.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: pan 6s infinite alternate linear;
 }
