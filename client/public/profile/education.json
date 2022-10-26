@@ -3,9 +3,17 @@
   "education": [
     {
       "title": "Apr 2022 - Oct 2022",
-      "cardTitle": "Software Engineering",
+      "cardTitle": "Software Engineering 🔗",
+      "url": "https://ga-core.s3.amazonaws.com/production/uploads/program/course_catalog/11342/SEI_Syllabi_062920.pdf",
       "cardSubtitle": "General Assembly",
-      "cardDetailedText": "React, Jest, AXIOS, HTM/CSS, Javascript, NodeJS, JSON, API, REST, SOAP, Python, Flask, Postgres, Git",
+      "cardDetailedText": [
+        "Front-End Development",
+        "Full-Stack Development",
+        "Front-End Frameworks",
+        "APIs Development",
+        "Tecnologies used:",
+        "- React, Jest, AXIOS, HTM/CSS, Javascript, NodeJS, JSON,REST API, Python, Flask, Postgres, Git, Postman"
+      ],
       "icon": {
         "src": "images/education/general-assembly.png",
         "alt": "GA"
@@ -13,7 +21,8 @@
     },
     {
       "title": "2020 - 2021",
-      "cardTitle": "Diploma - Web development",
+      "cardTitle": "Diploma - Website development 🔗",
+      "url": "https://www.warwick.edu.au/wp-content/uploads/2020/02/WIA_Digital.pdf",
       "cardSubtitle": "Warwick Institute of Australia",
       "cardDetailedText": [
         "Research and apply emerging web technology trends",
@@ -28,7 +37,8 @@
     },
     {
       "title": "2018 - 2020",
-      "cardTitle": "Diploma - Software development",
+      "cardTitle": "Diploma - Software development 🔗",
+      "url": "https://www.warwick.edu.au/wp-content/uploads/2020/02/WIA_Digital.pdf",
       "cardSubtitle": "Warwick Institute of Australia",
       "cardDetailedText": [
         "Match ICT needs with the strategic direction",
@@ -43,7 +53,8 @@
     },
     {
       "title": "2017",
-      "cardTitle": "English language",
+      "cardTitle": "English language 🔗",
+      "url": "https://www.eca.edu.au/courses-colleges-partners/elsis-english-language-school/",
       "cardSubtitle": "ELSIS - Australia",
       "cardDetailedText": [
         "Elementary English",
@@ -58,7 +69,8 @@
     },
     {
       "title": "2015 - 2016",
-      "cardTitle": "MBA in Project Management",
+      "cardTitle": "MBA in Project Management 🔗",
+      "url": "https://www.impacta.edu.br/mba/master-in-project-management-pmi-best-practices",
       "cardSubtitle": "Impacta Tecnologia, Brazil",
       "cardDetailedText": [
         "MBA with emphasis on PMI® project management best practices including PMBOK® 7 innovations",
@@ -74,7 +86,8 @@
     },
     {
       "title": "2008 - 2013",
-      "cardTitle": "Bachelor of Computer Science",
+      "cardTitle": "Bachelor of Computer Science 🔗",
+      "url": "https://cdn.usjt.br/app/uploads/2017/09/27010513/CIENCIA-DA-COMPUTA%C3%87AO-USJT-.pdf",
       "cardSubtitle": "University São Judas Tadeu, Brazil",
       "cardDetailedText": [
         "Diversity and Critical Thinking",
