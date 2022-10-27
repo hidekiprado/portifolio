@@ -57,7 +57,10 @@ const ContactMe = () => {
                       <Form.Label>Name</Form.Label>
                       <Form.Control
                         required
-                        style={{ backgroundColor: theme?.backGroundColor }}
+                        style={{
+                          backgroundColor: theme?.backGroundColor,
+                          color: theme?.fontColor,
+                        }}
                         data-testid="name"
                         aria-label="Name"
                         name="name"
@@ -70,7 +73,10 @@ const ContactMe = () => {
                       <Form.Label>Email address</Form.Label>
                       <Form.Control
                         required
-                        style={{ backgroundColor: theme?.backGroundColor }}
+                        style={{
+                          backgroundColor: theme?.backGroundColor,
+                          color: theme?.fontColor,
+                        }}
                         data-testid="email"
                         aria-label="Email address"
                         name="email"
@@ -89,7 +95,10 @@ const ContactMe = () => {
                       <Form.Label>Message</Form.Label>
                       <Form.Control
                         required
-                        style={{ backgroundColor: theme?.backGroundColor }}
+                        style={{
+                          backgroundColor: theme?.backGroundColor,
+                          color: theme?.fontColor,
+                        }}
                         data-testid="message"
                         aria-label="Message"
                         name="message"

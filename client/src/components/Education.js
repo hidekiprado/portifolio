@@ -44,6 +44,7 @@ const Education = () => {
             <Fade>
               <Chrono
                 allowDynamicUpdate
+                hideControls
                 useReadMore={false}
                 items={data?.education}
                 cardHeight={250}
