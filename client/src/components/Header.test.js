@@ -56,7 +56,7 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
-test("to have seven itens in the navbar", async () => {
+test("to have seven route itens in the navbar", async () => {
   render(
     <BrowserRouter>
       <AppContext.Provider value={{ darkMode }}>
